@@ -21,19 +21,24 @@ public class Task02{
         }
         int guess=Integer.parseInt(guess1);
         boolean continuation=true;
+        int count=0;
         while(continuation){
             if(guess>number){
                 System.out.print("Too high. Enter a new one: ");
                 guess=input.nextInt();
+                count++;
             }
             else if(guess<number){
                 System.out.print("Too low. Enter a new one: ");
                 guess=input.nextInt();
+                count++;
             }
             else{
                 System.out.println("You got the number!");
                 continuation=false;
             }
         }
+        count++;
+        System.out.println("You found the number in your "+count+"th guess.");
     }
 }
